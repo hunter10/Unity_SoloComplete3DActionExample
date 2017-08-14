@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{7BBEAFAA-228A-F4C8-4E21-7315A5F29CF8}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller/TouchPad.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Player/PlayerMovement.cs" Line="66" Column="30" />
+      <File FileName="Assets/Scripts/Controller/TouchPad.cs" Line="3" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Ch4__Start PreferredExecutionTarget="Unity.Editor" />
+</Properties>
