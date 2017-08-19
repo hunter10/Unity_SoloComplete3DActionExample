@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     protected Animator avatar;
+    //protected PlayerAttack palyerAttack;
 
     float lastAttackTime, lastSkillTime, lastDashTime;
     public bool attacking = false;
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         h = stickPos.x;
         v = stickPos.y;
+        // Debug.Log("h:" + h + ", v:" + v);
     }
 
 	// Update is called once per frame
@@ -28,8 +30,14 @@ public class PlayerMovement : MonoBehaviour {
         if(avatar)
         {
             float back = 1f;
+
             if (v < 0f) back = -1f;
-            avatar.SetFloat("Speed", (h*h + v*v));
+
+            //if ((h * h + v * v) > 0.1f)
+            {
+                //Debug.Log("h^2:" + h * h + "+ v^2:" + v * v + " = " + (h * h + v * v));
+                avatar.SetFloat("Speed", (h * h + v * v));
+            }
 
             Rigidbody rigibody = GetComponent<Rigidbody>();
 
@@ -39,6 +47,7 @@ public class PlayerMovement : MonoBehaviour {
                 speed.x = 4 * h;
                 speed.z = 4 * v;
                 rigibody.velocity = speed;
+                //Debug.Log(speed);
                 if (h != 0f && v != 0f){
                     transform.rotation = Quaternion.LookRotation(new Vector3(h, 0f, v));
                 }
@@ -68,5 +77,20 @@ public class PlayerMovement : MonoBehaviour {
                 yield return new WaitForSeconds(1f);
             }
         }
+    }
+
+    public void OnSkillDown()
+    {
+        if(Time.time - lastSkillTime > 1f)
+        {
+            avatar.SetBool("Skill", true);
+            lastSkillTime = Time.time;
+            //playerAttack.SkillAttack();
+        }
+    }
+
+    public void OnSkillUp()
+    {
+        avatar.SetBool("Skill", false);
     }
 }
