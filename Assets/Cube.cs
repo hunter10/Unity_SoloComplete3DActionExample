@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-        this.GetComponent<Rigidbody>().velocity = new Vector3(10f, 0, 0); 
+    float h, v;
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void OnStickChanged(Vector2 stickPos)
+    {
+        h = stickPos.x;
+        v = stickPos.y;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Rigidbody rigibody = GetComponent<Rigidbody>();
+
+        if (rigibody)
+        {
+            if (h != 0f && v != 0f)
+            {
+                transform.rotation = Quaternion.LookRotation(new Vector3(h, 0f, v));
+            }
+        }
+    }
 }

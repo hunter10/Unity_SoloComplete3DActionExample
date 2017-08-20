@@ -10,7 +10,6 @@ public class FollowingCamera : MonoBehaviour {
     // 따라다닐 객체를 지정합니다.
     public Transform follow;
 
-
     private void LateUpdate()
     {
         transform.position = follow.position + Vector3.up * distanceUp - Vector3.forward * distanceAway;
