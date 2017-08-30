@@ -90,10 +90,16 @@
     <Compile Include="Assets\Cube.cs" />
     <Compile Include="Assets\Scripts\Controller\FollowingCamera.cs" />
     <Compile Include="Assets\Scripts\Controller\TouchPad.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyMove.cs" />
     <Compile Include="Assets\Scripts\Player\Effect.cs" />
     <Compile Include="Assets\Scripts\Player\Effect_Destroy.cs" />
+    <Compile Include="Assets\Scripts\Player\NormalTarget.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\SkillTarget.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
