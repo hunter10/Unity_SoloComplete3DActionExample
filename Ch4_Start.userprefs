@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{7BBEAFAA-228A-F4C8-4E21-7315A5F29CF8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller/TouchPad.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerMovement.cs">
     <Files>
       <File FileName="Assets/Scripts/Player/PlayerMovement.cs" Line="66" Column="30" />
       <File FileName="Assets/Scripts/Controller/TouchPad.cs" Line="11" Column="31" />
+      <File FileName="Assets/Scripts/Enemy/EnemySpawn.cs" Line="19" Column="100" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -116,6 +116,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMove.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemySpawn.cs" />
     <Compile Include="Assets\Scripts\Player\Effect.cs" />
     <Compile Include="Assets\Scripts\Player\Effect_Destroy.cs" />
     <Compile Include="Assets\Scripts\Player\NormalTarget.cs" />
