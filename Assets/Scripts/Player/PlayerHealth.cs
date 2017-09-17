@@ -61,7 +61,8 @@ public class PlayerHealth : MonoBehaviour {
         {
             damageImage.color = flashColor;
         }
-        else{
+        else
+        {
             damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
 
