@@ -20,8 +20,14 @@ public class PlayerHealth : MonoBehaviour {
     // 주인공이 데미지를 입었을 때 재생할 오디오입니다.
     public AudioClip deathClip;
 
-    // 애니메이터 컨트롤러에 매개변수를 전달하기 위해 연결한 Animator 컴포넌트
-    Animator anim;
+    // 화면이 빨갛게 변하고나서 다시 투명한 상태로 돌아가는 속도입니다.
+    public float flashSpeed = 5f;
+
+	// 주인공이 데미지를 입었을때 화면이 변하게되는 색상입니다.
+	public Color flashColor = new Color(1f, 0f, 0f, 0.1f);
+
+	// 애니메이터 컨트롤러에 매개변수를 전달하기 위해 연결한 Animator 컴포넌트
+	Animator anim;
 
     // 플레이어 게임 오브젝트에 붙어있는 오디오 소스 컴포넌트
     // 효과을을 재생할 때 필요합니다.
@@ -32,6 +38,9 @@ public class PlayerHealth : MonoBehaviour {
 
     // 플레이어가 죽었는지 저장하는 플래그
     bool isDead;
+
+    // 플레이어가 데미지를 입었는지 저장하는 플래그
+    bool damaged;
 
 
 	// Use this for initialization
@@ -46,9 +55,24 @@ public class PlayerHealth : MonoBehaviour {
         currentHealth = startingHealth;
 	}
 
+    void Update()
+    {
+        if(damaged)
+        {
+            damageImage.color = flashColor;
+        }
+        else{
+            damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+        }
+
+        damaged = false;
+    }
+
     // 플레이어가 공격받았을때 호출되는 함수입니다.
     public void TakeDamage(int amount)
     {
+        damaged = true;
+
         // 공격을 받으면 amount만큼 체력을 감소시킵니다.
         currentHealth -= amount;
 
