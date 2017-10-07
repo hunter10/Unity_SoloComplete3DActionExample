@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio for Mac
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity_SoloComplete3DActionExample", "Unity_SoloComplete3DActionExample.csproj", "{EA9E45A9-94B2-75D8-BB69-6D7B46130B5B}"
 EndProject
 Global
