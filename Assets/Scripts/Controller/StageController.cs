@@ -18,11 +18,10 @@ public class StageController : MonoBehaviour {
 	void Start () {
         Instance = this;
 
-        DialogDataAlert alert = new DialogDataAlert("START", "Game Start!",
-                                                   delegate {
-                                                       Debug.Log("OK Pressed");
-                                                            }
-                                                   );
+        DialogDataAlert alert = new DialogDataAlert("START", "Game Start!", delegate() {
+            Debug.Log("OK Pressed");
+        });
+
         DialogManager.Instance.Push(alert);
 	}
 
