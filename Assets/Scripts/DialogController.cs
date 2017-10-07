@@ -8,20 +8,11 @@ public class DialogController : MonoBehaviour {
     // 팝업창의 Transform입니다.
     public Transform window;
 
-    public virtual void Awake()
-    {
+    public virtual void Awake(){}
 
-    }
+    public virtual void Start(){}
 
-    public virtual void Start()
-    {
-
-    }
-
-    public virtual void Build(DialogData data)
-    {
-
-    }
+    public virtual void Build(DialogData data){}
 
     public bool Visible
     {
