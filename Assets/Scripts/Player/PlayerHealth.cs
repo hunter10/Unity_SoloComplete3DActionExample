@@ -95,6 +95,8 @@ public class PlayerHealth : MonoBehaviour {
 	
 	void Death()
     {
+        StageController.Instance.FinishGame();
+
         // 캐릭터가 죽었다면 isDead플래그를 true로 설정합니다.
         isDead = true;
 
