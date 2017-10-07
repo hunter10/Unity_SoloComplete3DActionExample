@@ -18,7 +18,24 @@ public class EnemyHealth : MonoBehaviour {
     bool isSinking;
     bool damaged;
 
-    
+    private void Start()
+    {
+        Init();    
+    }
+
+    public void Init()
+    {
+        currentHealth = startingHealth;
+
+        isDead = false;
+        damaged = false;
+        isSinking = false;
+
+        BoxCollider collider = transform.GetComponentInChildren<BoxCollider>();
+        collider.isTrigger = false;
+
+        GetComponent<NavMeshAgent>().enabled = true;
+    }
 
     private void Awake()
     {
@@ -39,15 +56,19 @@ public class EnemyHealth : MonoBehaviour {
     {
         yield return new WaitForSeconds(delay);
 
-        try
+        if (!isDead)
         {
-            TakeDamage(damage);
-            Vector3 diff = playerPosition - transform.position;
-            diff = diff / diff.sqrMagnitude;
-            GetComponent<Rigidbody>().AddForce((transform.position - new Vector3(diff.x, diff.y, 0f)) * 50f * pushBack);
-        } catch(MissingReferenceException e)
-        {
-            Debug.Log(e.ToString());
+            try
+            {
+                TakeDamage(damage);
+                Vector3 diff = playerPosition - transform.position;
+                diff = diff / diff.sqrMagnitude;
+                GetComponent<Rigidbody>().AddForce((transform.position - new Vector3(diff.x, diff.y, 0f)) * 50f * pushBack);
+            }
+            catch (MissingReferenceException e)
+            {
+                Debug.Log(e.ToString());
+            }
         }
     }
 
