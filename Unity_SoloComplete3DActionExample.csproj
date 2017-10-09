@@ -93,8 +93,10 @@
     <Compile Include="Assets\Scripts\Controller\TouchPad.cs" />
     <Compile Include="Assets\Scripts\Dialog\DialogController.cs" />
     <Compile Include="Assets\Scripts\Dialog\DialogControllerAlert.cs" />
+    <Compile Include="Assets\Scripts\Dialog\DialogControllerConfirm.cs" />
     <Compile Include="Assets\Scripts\Dialog\DialogData.cs" />
     <Compile Include="Assets\Scripts\Dialog\DialogDataAlert.cs" />
+    <Compile Include="Assets\Scripts\Dialog\DialogDataConfirm.cs" />
     <Compile Include="Assets\Scripts\Dialog\DialogManager.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />

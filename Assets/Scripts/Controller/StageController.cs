@@ -23,7 +23,9 @@ public class StageController : MonoBehaviour {
         });
 
         DialogManager.Instance.Push(alert);
-	}
+
+        
+    }
 
     public void AddPoint(int Point)
     {
@@ -33,6 +35,21 @@ public class StageController : MonoBehaviour {
 
     public void FinishGame()
     {
-        Application.LoadLevel("Lobby");
+        DialogDataConfirm confirm = new DialogDataConfirm("Restart?", "Please press OK if you want to restart the game",
+            delegate (bool yn) {
+                if (yn)
+                {
+                    Debug.Log("OK Pressed!");
+                    Application.LoadLevel(Application.loadedLevel);
+                }
+                else
+                {
+                    Debug.Log("Cancel Pressed!");
+                    Application.Quit();
+                }
+
+            });
+
+        DialogManager.Instance.Push(confirm);
     }
 }

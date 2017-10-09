@@ -47,7 +47,7 @@ public class TouchPad : MonoBehaviour {
     private void FixedUpdate()
     {
         // 모바일에서는 터치패드 방식으로 여러 터치 입력을 받아 처리합니다.
-        //HandleTouchInput();
+        HandleTouchInput();
 
 #if UNITY_EDITOR || UNITY_STANDALONE_OSX || UNITY_STANDALONE_WIN || UNITY_WEBPLAYER
         HandleInput(Input.mousePosition);
