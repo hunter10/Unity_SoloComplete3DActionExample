@@ -1,22 +1,17 @@
 ﻿<Properties StartupConfiguration="{EA9E45A9-94B2-75D8-BB69-6D7B46130B5B}|">
   <MonoDevelop.Ide.ItemProperties.Unity__SoloComplete3DActionExample PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerHealth.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller/FollowingCamera.cs">
     <Files>
-      <File FileName="../PerformanceTest/Assets/CollectionTest.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controller/FollowingCamera.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Player/PlayerHealth.cs" Line="95" Column="2" />
       <File FileName="Assets/Scripts/Enemy/EnemyHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/DialogManager.cs" Line="73" Column="2" />
-      <File FileName="Assets/Scripts/DialogController.cs" Line="11" Column="32" />
-      <File FileName="Assets/Scripts/DialogData.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/DialogDataAlert.cs" Line="18" Column="42" />
-      <File FileName="Assets/Scripts/DialogControllerAlert.cs" Line="45" Column="38" />
-      <File FileName="Assets/Scripts/Controller/StageController.cs" Line="40" Column="1" />
+      <File FileName="Assets/Scripts/Controller/StageController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/hunter/Work/Unity_SoloComplete3DActionExample/Assets/Scripts/DialogManager.cs" relfile="Assets/Scripts/DialogManager.cs" line="73" column="2" />
+      <Breakpoint file="/Users/hunter/Work/Unity_SoloComplete3DActionExample/Assets/Scripts/DialogManager.cs" line="73" column="2" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
